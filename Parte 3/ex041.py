@@ -21,3 +21,4 @@ else:
                     else:
                         if num1==num2 or num2==num3 or num1==num3:
                             print("Existem números iguais, repita o processo!")
+
