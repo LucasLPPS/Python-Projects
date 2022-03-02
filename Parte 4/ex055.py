@@ -4,8 +4,15 @@ print("1. Pedra.")
 print("2. Papel.")
 print("3. Tesoura.")
 esc=int(input("Opção:"))
+from time import sleep
 from random import randrange
 esc2=randrange(2,4)
+print("Pedra...")
+sleep(1)
+print("Papel...")
+sleep(1)
+print("Tesoura!")
+sleep(1)
 if esc==esc2:
     print("Empate!")
 elif esc==1 and esc2==2:
