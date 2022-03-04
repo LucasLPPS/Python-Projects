@@ -13,4 +13,5 @@ while termos!=0:
     while n2!=an2+1:
         print("{} ".format(n2), end=" ")
         n2 = n2 + r
+print("Programa finalizado.")
 

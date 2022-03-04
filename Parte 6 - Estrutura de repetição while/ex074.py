@@ -27,3 +27,9 @@ while c!=5:
     if c!=1 or c!=2 or c!=4 or c!=5:
         print("Digite uma opção válida.")
 print("Programa finalizado.")
+# se eu retirar de dentro do while !=5 as seguintes linhas:
+# n1 = int(input("Digite o primeiro valor:"))
+# n2 = int(input("Digite o segundo valor:"))
+# e adicionar uma condição de if c==4 pedindo pra digitar os novos números com
+# esses mesmo comandos, o programa nunca vai parar até eu digitar 5
+# no estado atual do meu código, o programa finaliza quando escolho as opções de 1 a 3
