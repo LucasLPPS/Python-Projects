@@ -2,7 +2,7 @@ mais18=quantH=quantM20=opção=0
 while True:
     print("===CADASTRO DE PESSOA===")
     idade=int(input("Digite a idade:"))
-    sexo = str(input("Digite o sexo [M] Masculino ou [F] Feminino:")).strip.().upper().[0]
+    sexo = str(input("Digite o sexo [M] Masculino ou [F] Feminino:")).strip().upper()[0]
     if idade>18:
         mais18=mais18+1
     if sexo=="M":
