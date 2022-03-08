@@ -38,7 +38,7 @@ c2=a+b # ele não vai somar os elementos entre si, e sim juntar os dois conjunto
 print(c2)
 # a ordem da soma influencia no resultado final, a+b(2, 5, 4, 5, 8, 1, 2) não é igual a b+a(5, 8, 1, 2, 2, 5, 4)
 print(len(c2))
-print(c2.count(5)) # mostra quem está na posição 5
+print(c2.count(5)) # mostra em que posição está o número 5
 print(c2.index(8)) # mostra a posição em que está o elemento 8
 print(c2.index(5,1)) # mostra a primeira posição do elemento 5, visto que ele aparece duas vezes
 
