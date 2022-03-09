@@ -21,8 +21,8 @@ for c in alunos:
 print("No. NOME                MEDIA")
 for c in range(0,len(alunos)):
     print(c,end="")
-    print(f"   {alunos[c][0]:.<20}", end="") # alinhado a esquerda, dentro de 30 espaços de caracteres, com pontos completando o restante vazio
-    print(f"{media[c]:>5.2f}") # alinhado a direita, dentro de 7 espaços de caracteres, e o valor aparecendo com 2 casas decimais
+    print(f"   {alunos[c][0]:.<20}", end="") # alinhado a esquerda, dentro de 20 espaços de caracteres, com pontos completando o restante vazio
+    print(f"{media[c]:>5.2f}") # alinhado a direita, dentro de 5 espaços de caracteres, e o valor aparecendo com 2 casas decimais
 while True:
     escolha=int(input("Mostrar notas de qual aluno? (999 interrompe):"))
     if escolha == 999:
