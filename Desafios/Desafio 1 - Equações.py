@@ -1,7 +1,7 @@
 # User pode digitar qualquer expressão matemática
 # expressões do tipo Z = X ? Y, onde ? = [+,-,*,/]
 print("-="*15)
-print("    RESOLUÇÃO DE EQUAÇÕES:")
+print("    RESOLUÇÃO DE EQUAÇÕES ")
 print("-="*15)
 print("Digite uma expressão do tipo Z = X ? Y")
 print(" - Onde Z, X, Y são as variáveis e ? um operador matemático: +,-,*,/")
