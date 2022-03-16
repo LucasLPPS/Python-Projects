@@ -1,9 +1,3 @@
-# jogo caça palavras
-# user vai dizer quantas palavras ele quer colocar no caça palavras
-# após isso, irá digitar as palavras em si
-# lista2 = lista[::-1] -> inverte um texto
-# lista.sort(reverse=True) -> inverste lista
-# lista.reverse() -> inverte lista
 import string
 import random
 print("-=" * 15)
@@ -37,14 +31,74 @@ while True:
         for c in range(0, 40):
             matriz[l][c] = random.choice(string.ascii_letters.upper()) # pega um elemento do alfabeto (A-Z) por vez
     print("-=" * 15)
+    # ---------------------------------------------- ok
+    if quant == 1:
+        escolha = random.choice([0, 1]) # randomizando se vai estar ao contrário
+        if escolha == 0:
+            palavralista = list(palavras[0])
+        elif escolha == 1:
+            palavralista = list(palavras[0])
+            palavralista.reverse()
+        posição = random.choice(["horiz", "vert"])
+        if posição == "horiz" or len(palavralista[0]) > 10:
+            l2 = random.randint(0, 10)
+            c2 = random.randint(0, 20)
+            for c in range(0, len(palavralista)):
+                matriz[l2][c2+c] = palavralista[c]
+        if posição == "vert":
+            l2 = 0
+            c2 = random.randint(0, 40)
+            for c in range(0, len(palavralista)):
+                matriz[l2+c][c2] = palavralista[c]
+    # ---------------------------------------------- ok
+    if quant == 2:
+
+        escolha = random.choice([0, 1]) # randomizando se vai estar ao contrário
+        if escolha == 0:
+            palavralista = list(palavras[0])
+        elif escolha == 1:
+            palavralista = list(palavras[0])
+            palavralista.reverse()
+
+        escolha1 = random.choice([0, 1])
+        if escolha1 == 0:
+            palavralista1 = list(palavras[1])
+        elif escolha1 == 1:
+            palavralista1 = list(palavras[1])
+            palavralista1.reverse()
+        # para a 1º palavra:
+        posição = random.choice(["horiz", "vert"])
+        if posição == "horiz" or len(palavralista) > 10:
+            l2 = random.randint(0, 10)
+            c2 = random.randint(0, 20)
+            for c in range(0, len(palavralista)):
+                matriz[l2][c2+c] = palavralista[c]
+        if posição == "vert":
+            l2 = 0
+            c2 = random.randint(0, 40)
+            for c in range(0, len(palavralista)):
+                matriz[l2+c][c2] = palavralista[c]
+        # para a 2º palavra:
+        posição = random.choice(["horiz", "vert"])
+        if posição == "horiz" or len(palavralista1) > 10:
+            l2_1 = random.randint(0, 10)
+            c2_1 = random.randint(0, 20)
+            for c in range(0, len(palavralista1)):
+                matriz[l2_1][c2_1 + c] = palavralista1[c]
+        if posição == "vert":
+            l2_1 = 0
+            c2_1 = random.randint(0, 40)
+            for c in range(0, len(palavralista1)):
+                matriz[l2_1 + c][c2_1] = palavralista1[c]
+    # ---------------------------------------------------- ok
+    # fazer para 3, 4 e 5 palavras
+    # fazer para quantidade maiores de palavras
     for l in range(0, 10):
         for c in range(0, 40):
             print(f"{matriz[l][c]}", end="")
         print()  # para quebrar a linha
     print()
-    # PARA FAZER EM SEGUIDA:
-    # encontrar forma de colocar as letras das palavras escolhidas dentro da matriz
-    # talvez possa usar o random.choice(palavras)
+    palavras.clear()
     # -------------------------------------------
     resp = str(input("Deseja cadastrar outro caça palavras? [S/N]:")).strip().upper()[0]
     while resp != "S" and resp != "N":
