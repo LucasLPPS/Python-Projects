@@ -52,14 +52,14 @@ while True:
                 matriz[l2+c][c2] = palavralista[c]
     # ---------------------------------------------- ok
     if quant == 2:
-
-        escolha = random.choice([0, 1]) # randomizando se vai estar ao contrário
+        # para a 1º palavra:
+        escolha = random.choice([0, 1])
         if escolha == 0:
             palavralista = list(palavras[0])
         elif escolha == 1:
             palavralista = list(palavras[0])
             palavralista.reverse()
-
+        # para a 2º palavra:
         escolha1 = random.choice([0, 1])
         if escolha1 == 0:
             palavralista1 = list(palavras[1])
@@ -79,20 +79,252 @@ while True:
             for c in range(0, len(palavralista)):
                 matriz[l2+c][c2] = palavralista[c]
         # para a 2º palavra:
-        posição = random.choice(["horiz", "vert"])
-        if posição == "horiz" or len(palavralista1) > 10:
+        posição1 = random.choice(["horiz", "vert"])
+        if posição1 == "horiz" or len(palavralista1) > 10:
             l2_1 = random.randint(0, 10)
             c2_1 = random.randint(0, 20)
             for c in range(0, len(palavralista1)):
                 matriz[l2_1][c2_1 + c] = palavralista1[c]
-        if posição == "vert":
+        if posição1 == "vert":
             l2_1 = 0
             c2_1 = random.randint(0, 40)
             for c in range(0, len(palavralista1)):
                 matriz[l2_1 + c][c2_1] = palavralista1[c]
     # ---------------------------------------------------- ok
-    # fazer para 3, 4 e 5 palavras
-    # fazer para quantidade maiores de palavras
+    if quant == 3:
+        # para a 1º palavra:
+        escolha = random.choice([0, 1])
+        if escolha == 0:
+            palavralista = list(palavras[0])
+        elif escolha == 1:
+            palavralista = list(palavras[0])
+            palavralista.reverse()
+        # para a 2º palavra:
+        escolha1 = random.choice([0, 1])
+        if escolha1 == 0:
+            palavralista1 = list(palavras[1])
+        elif escolha1 == 1:
+            palavralista1 = list(palavras[1])
+            palavralista1.reverse()
+        # para a 3º palavra:
+        escolha2 = random.choice([0, 1])
+        if escolha2 == 0:
+            palavralista2 = list(palavras[2])
+        elif escolha2 == 1:
+            palavralista2 = list(palavras[2])
+            palavralista2.reverse()
+        # para a 1º palavra:
+        posição = random.choice(["horiz", "vert"])
+        if posição == "horiz" or len(palavralista) > 10:
+            l2 = random.randint(0, 10)
+            c2 = random.randint(0, 20)
+            for c in range(0, len(palavralista)):
+                matriz[l2][c2+c] = palavralista[c]
+        if posição == "vert":
+            l2 = 0
+            c2 = random.randint(0, 40)
+            for c in range(0, len(palavralista)):
+                matriz[l2+c][c2] = palavralista[c]
+        # para a 2º palavra:
+        posição1 = random.choice(["horiz", "vert"])
+        if posição1 == "horiz" or len(palavralista1) > 10:
+            l2_1 = random.randint(0, 10)
+            c2_1 = random.randint(0, 20)
+            for c in range(0, len(palavralista1)):
+                matriz[l2_1][c2_1 + c] = palavralista1[c]
+        if posição1 == "vert":
+            l2_1 = 0
+            c2_1 = random.randint(0, 40)
+            for c in range(0, len(palavralista1)):
+                matriz[l2_1 + c][c2_1] = palavralista1[c]
+        # para a 3º palavra:
+        posição2 = random.choice(["horiz", "vert"])
+        if posição2 == "horiz" or len(palavralista2) > 10:
+            l2_2 = random.randint(0, 10)
+            c2_2 = random.randint(0, 20)
+            for c in range(0, len(palavralista2)):
+                matriz[l2_2][c2_2 + c] = palavralista2[c]
+        if posição2 == "vert":
+            l2_2 = 0
+            c2_2 = random.randint(0, 40)
+            for c in range(0, len(palavralista2)):
+                matriz[l2_2 + c][c2_2] = palavralista2[c]
+    # --------------------------------------------------- ok
+    if quant == 4:
+        # para a 1º palavra:
+        escolha = random.choice([0, 1])
+        if escolha == 0:
+            palavralista = list(palavras[0])
+        elif escolha == 1:
+            palavralista = list(palavras[0])
+            palavralista.reverse()
+        # para a 2º palavra:
+        escolha1 = random.choice([0, 1])
+        if escolha1 == 0:
+            palavralista1 = list(palavras[1])
+        elif escolha1 == 1:
+            palavralista1 = list(palavras[1])
+            palavralista1.reverse()
+        # para a 3º palavra:
+        escolha2 = random.choice([0, 1])
+        if escolha2 == 0:
+            palavralista2 = list(palavras[2])
+        elif escolha2 == 1:
+            palavralista2 = list(palavras[2])
+            palavralista2.reverse()
+        # para a 4º palavra:
+        escolha3 = random.choice([0, 1])
+        if escolha3 == 0:
+            palavralista3 = list(palavras[3])
+        elif escolha3 == 1:
+            palavralista3 = list(palavras[3])
+            palavralista3.reverse()
+        # para a 1º palavra:
+        posição = random.choice(["horiz", "vert"])
+        if posição == "horiz" or len(palavralista) > 10:
+            l2 = random.randint(0, 10)
+            c2 = random.randint(0, 20)
+            for c in range(0, len(palavralista)):
+                matriz[l2][c2+c] = palavralista[c]
+        if posição == "vert":
+            l2 = 0
+            c2 = random.randint(0, 40)
+            for c in range(0, len(palavralista)):
+                matriz[l2+c][c2] = palavralista[c]
+        # para a 2º palavra:
+        posição1 = random.choice(["horiz", "vert"])
+        if posição1 == "horiz" or len(palavralista1) > 10:
+            l2_1 = random.randint(0, 10)
+            c2_1 = random.randint(0, 20)
+            for c in range(0, len(palavralista1)):
+                matriz[l2_1][c2_1 + c] = palavralista1[c]
+        if posição1 == "vert":
+            l2_1 = 0
+            c2_1 = random.randint(0, 40)
+            for c in range(0, len(palavralista1)):
+                matriz[l2_1 + c][c2_1] = palavralista1[c]
+        # para a 3º palavra:
+        posição2 = random.choice(["horiz", "vert"])
+        if posição2 == "horiz" or len(palavralista2) > 10:
+            l2_2 = random.randint(0, 10)
+            c2_2 = random.randint(0, 20)
+            for c in range(0, len(palavralista2)):
+                matriz[l2_2][c2_2 + c] = palavralista2[c]
+        if posição2 == "vert":
+            l2_2 = 0
+            c2_2 = random.randint(0, 40)
+            for c in range(0, len(palavralista2)):
+                matriz[l2_2 + c][c2_2] = palavralista2[c]
+        # para a 4º palavra:
+        posição3 = random.choice(["horiz", "vert"])
+        if posição3 == "horiz" or len(palavralista3) > 10:
+            l2_3 = random.randint(0, 10)
+            c2_3 = random.randint(0, 20)
+            for c in range(0, len(palavralista3)):
+                matriz[l2_3][c2_3 + c] = palavralista3[c]
+        if posição3 == "vert":
+            l2_3 = 0
+            c2_3 = random.randint(0, 40)
+            for c in range(0, len(palavralista3)):
+                matriz[l2_3 + c][c2_3] = palavralista3[c]
+    # --------------------------------------------------- ok
+    if quant == 5:
+        # para a 1º palavra:
+        escolha = random.choice([0, 1])
+        if escolha == 0:
+            palavralista = list(palavras[0])
+        elif escolha == 1:
+            palavralista = list(palavras[0])
+            palavralista.reverse()
+        # para a 2º palavra:
+        escolha1 = random.choice([0, 1])
+        if escolha1 == 0:
+            palavralista1 = list(palavras[1])
+        elif escolha1 == 1:
+            palavralista1 = list(palavras[1])
+            palavralista1.reverse()
+        # para a 3º palavra:
+        escolha2 = random.choice([0, 1])
+        if escolha2 == 0:
+            palavralista2 = list(palavras[2])
+        elif escolha2 == 1:
+            palavralista2 = list(palavras[2])
+            palavralista2.reverse()
+        # para a 4º palavra:
+        escolha3 = random.choice([0, 1])
+        if escolha3 == 0:
+            palavralista3 = list(palavras[3])
+        elif escolha3 == 1:
+            palavralista3 = list(palavras[3])
+            palavralista3.reverse()
+        # para a 5º palavra:
+        escolha4 = random.choice([0, 1])
+        if escolha4 == 0:
+            palavralista4 = list(palavras[4])
+        elif escolha4 == 1:
+            palavralista4 = list(palavras[4])
+            palavralista4.reverse()
+        # para a 1º palavra:
+        posição = random.choice(["horiz", "vert"])
+        if posição == "horiz" or len(palavralista) > 10:
+            l2 = random.randint(0, 10)
+            c2 = random.randint(0, 20)
+            for c in range(0, len(palavralista)):
+                matriz[l2][c2+c] = palavralista[c]
+        if posição == "vert":
+            l2 = 0
+            c2 = random.randint(0, 40)
+            for c in range(0, len(palavralista)):
+                matriz[l2+c][c2] = palavralista[c]
+        # para a 2º palavra:
+        posição1 = random.choice(["horiz", "vert"])
+        if posição1 == "horiz" or len(palavralista1) > 10:
+            l2_1 = random.randint(0, 10)
+            c2_1 = random.randint(0, 20)
+            for c in range(0, len(palavralista1)):
+                matriz[l2_1][c2_1 + c] = palavralista1[c]
+        if posição1 == "vert":
+            l2_1 = 0
+            c2_1 = random.randint(0, 40)
+            for c in range(0, len(palavralista1)):
+                matriz[l2_1 + c][c2_1] = palavralista1[c]
+        # para a 3º palavra:
+        posição2 = random.choice(["horiz", "vert"])
+        if posição2 == "horiz" or len(palavralista2) > 10:
+            l2_2 = random.randint(0, 10)
+            c2_2 = random.randint(0, 20)
+            for c in range(0, len(palavralista2)):
+                matriz[l2_2][c2_2 + c] = palavralista2[c]
+        if posição2 == "vert":
+            l2_2 = 0
+            c2_2 = random.randint(0, 40)
+            for c in range(0, len(palavralista2)):
+                matriz[l2_2 + c][c2_2] = palavralista2[c]
+        # para a 4º palavra:
+        posição3 = random.choice(["horiz", "vert"])
+        if posição3 == "horiz" or len(palavralista3) > 10:
+            l2_3 = random.randint(0, 10)
+            c2_3 = random.randint(0, 20)
+            for c in range(0, len(palavralista3)):
+                matriz[l2_3][c2_3 + c] = palavralista3[c]
+        if posição3 == "vert":
+            l2_3 = 0
+            c2_3 = random.randint(0, 40)
+            for c in range(0, len(palavralista3)):
+                matriz[l2_3 + c][c2_3] = palavralista3[c]
+        # para a 5º palavra:
+        posição4 = random.choice(["horiz", "vert"])
+        if posição4 == "horiz" or len(palavralista4) > 10:
+            l2_4 = random.randint(0, 10)
+            c2_4 = random.randint(0, 20)
+            for c in range(0, len(palavralista4)):
+                matriz[l2_4][c2_4 + c] = palavralista4[c]
+        if posição4 == "vert":
+            l2_4 = 0
+            c2_4 = random.randint(0, 40)
+            for c in range(0, len(palavralista4)):
+                matriz[l2_4 + c][c2_4] = palavralista4[c]
+    # procurar forma de proteger as posições onde já existem palavras
     for l in range(0, 10):
         for c in range(0, 40):
             print(f"{matriz[l][c]}", end="")
