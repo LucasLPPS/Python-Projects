@@ -93,13 +93,15 @@ while True:
     # perguntando se gostaria de ver a resposta
     ans = str(input("Deseja ver a resposta? [S/N]:")).strip().upper()[0]
     if ans == "S":
-        print(respostas)
+        for r in range(0, len(respostas)):
+            print(f"{r+1}º palavra na posição: {respostas[r]}.")
     else:
         while ans != "N" or ans != "S":
             print("Escolha [S/N]!")
             ans = str(input("[S/N]:")).strip().upper()[0]
             if ans == "S":
-                print(respostas)
+                for r in range(0, len(respostas)):
+                    print(f"{r + 1}º palavra na posição: {respostas[r]}.")
     # encontrar se existe uma forma de colorir as posições onde se encontram as palavras
 
     # ---------------------------------------------------------------------------
@@ -108,13 +110,14 @@ while True:
     ans2 = str(input("Deseja jogar novamente? [S/N]:")).strip().upper()[0]
     if ans2 == "N":
         print("Volte sempre!")
-        break
+        break # referente ao while True inicial
     else:
         while ans2 != "N" or ans2 != "S":
             print("Escolha [S/N]!")
             ans2 = str(input("[S/N]:")).strip().upper()[0]
-            if ans2 == "N":
-                print("Volte sempre!")
+        if ans2 == "N":
+            print("Volte sempre!")
+            break  # referente ao while True inicial
 
     # ---------------------------------------------------------------------------
 
