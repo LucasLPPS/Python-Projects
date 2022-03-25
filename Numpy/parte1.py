@@ -76,7 +76,7 @@ print(n[1:6]) # nesse caso irá retornar da posição 1 até a posição 5, já 
 #                                              n[1:] - da posição 1 até o final
 #                                              n[:] - da posição incial até o final
 #                                              n[1:6:2] - início, fim e passo
-# par arrays com mais dimensões:
+# para arrays com mais dimensões:
 o = np.random.rand(3, 3)
 print(o)
 print(o[0:2]) # irá mostrar as duas primeiras linhas, lembando que a última linha não irá ser mostrada
