@@ -129,4 +129,3 @@ while True:
 
 # fazer testes
 print("Programa finalizado.")
-# revisão finalizada
