@@ -18,9 +18,10 @@ while True:
             break
         elif type(quant) == str:
             print("Opção inválida. Tente novamente.")
-
+    if quant == "0":
+        print("Volte sempre!")
+        break
     # --------------------------------------------------------------------------
-
     # armazenando as palavras:
     while True:
         palavras = list()
@@ -95,13 +96,16 @@ while True:
     if ans == "S":
         for r in range(0, len(respostas)):
             print(f"{r+1}º palavra na posição: {respostas[r]}.")
-    else:
-        while ans != "N" or ans != "S":
+    elif ans != "S" or ans != "N":
+        while True:
             print("Escolha [S/N]!")
             ans = str(input("[S/N]:")).strip().upper()[0]
-            if ans == "S":
-                for r in range(0, len(respostas)):
-                    print(f"{r + 1}º palavra na posição: {respostas[r]}.")
+            if ans == "S" or ans == "N":
+                break
+        if ans == "S":
+            for r in range(0, len(respostas)):
+                print(f"{r + 1}º palavra na posição: {respostas[r]}.")
+
     # encontrar se existe uma forma de colorir as posições onde se encontram as palavras
 
     # ---------------------------------------------------------------------------
@@ -112,9 +116,11 @@ while True:
         print("Volte sempre!")
         break # referente ao while True inicial
     else:
-        while ans2 != "N" or ans2 != "S":
+        while True:
             print("Escolha [S/N]!")
             ans2 = str(input("[S/N]:")).strip().upper()[0]
+            if ans2 == "S" or ans2 == "N":
+                break
         if ans2 == "N":
             print("Volte sempre!")
             break  # referente ao while True inicial
