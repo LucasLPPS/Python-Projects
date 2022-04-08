@@ -129,3 +129,4 @@ while True:
 
 # fazer testes
 print("Programa finalizado.")
+# melhorias: colocar numeração na matriz; depois tentar colorir
